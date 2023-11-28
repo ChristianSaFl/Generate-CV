@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TuProyecto.MainPage">
+    <ScrollView>
+        <StackLayout Padding="20">
+        <Label Text="Datos del Curriculum Vitae" HorizontalOptions="CenterAndExpand" FontSize="Large" Margin="0,20,0,20"/>
+
+        <Entry Placeholder="Nombre" x:Name="nombreEntry" Margin="0,0,0,10"/>
+        <Entry Placeholder="Apellido" x:Name="apellidoEntry" Margin="0,0,0,10"/>
+        <DatePicker x:Name="fechaNacimientoDatePicker" Margin="0,0,0,10"/>
+        <Entry Placeholder="Correo" Keyboard="Email" x:Name="correoEntry" Margin="0,0,0,10"/>
+        <Entry Placeholder="Número de Teléfono" Keyboard="Telephone" x:Name="telefonoEntry" Margin="0,0,0,10"/>
+        <Entry Placeholder="DNI" Keyboard="Numeric" x:Name="dniEntry" Margin="0,0,0,10"/>
+
+
+        <Picker Title="Nacionalidad" x:Name="nacionalidadPicker" Margin="0,0,0,10">
+            <Picker.Items>
+                <x:String>Seleccione una Nacionalidad</x:String>
+                <x:String>Español</x:String>
+                <x:String>Ingles</x:String>
+                <x:String>Frances</x:String>
+            </Picker.Items>
+        </Picker>
+
+
+        <StackLayout Margin="0,0,0,10">
+            <Label Text="Nivel de Inglés"/>
+            <Switch x:Name="inglesBasicoSwitch" OnColor="#4CAF50" ThumbColor="White"/>
+            <Label Text="Básico"/>
+            <Switch x:Name="inglesIntermedioSwitch" OnColor="#4CAF50" ThumbColor="White"/>
+            <Label Text="Intermedio"/>
+            <Switch x:Name="inglesAvanzadoSwitch" OnColor="#4CAF50" ThumbColor="White"/>
+            <Label Text="Avanzado"/>
+        </StackLayout>
+
+
+        <StackLayout Margin="0,0,0,10">
+            <Label Text="Lenguajes de Programación"/>
+            <Switch x:Name="pythonSwitch" OnColor="#4CAF50" ThumbColor="White"/>
+            <Label Text="Python"/>
+            <Switch x:Name="javascriptSwitch" OnColor="#4CAF50" ThumbColor="White"/>
+            <Label Text="JavaScript"/>
+            <Switch x:Name="csharpSwitch" OnColor="#4CAF50" ThumbColor="White"/>
+            <Label Text="C#"/>
+        </StackLayout>
+
+
+        <StackLayout Margin="0,0,0,10">
+            <Label Text="Aptitudes y Habilidades"/>
+            <Entry Placeholder="Aptitudes" x:Name="aptitudesEntry" Margin="0,0,0,10"/>
+            <Switch x:Name="organizacionSwitch" OnColor="#4CAF50"/>
+            <Label Text="Organización"/>
+            <Switch x:Name="resolucionSwitch" OnColor="#4CAF50"/>
+            <Label Text="Resolución de problemas"/>
+            <Switch x:Name="trabajoEquipoSwitch" OnColor="#4CAF50"/>
+            <Label Text="Trabajo en equipo"/>
+            <Switch x:Name="creatividadSwitch" OnColor="#4CAF50"/>
+            <Label Text="Creatividad"/>
+        </StackLayout>
+
+
+
+        <StackLayout Margin="0,0,0,10">
+            <Label Text="Experiencia Laboral"/>
+            <Entry Placeholder="Experiencia Laboral" x:Name="experienciaEntry" Margin="0,0,0,10"/>
+            <Button Text="Agregar Experiencia Laboral" Clicked="AgregarExperiencia" Margin="0,0,0,10"/>
+        </StackLayout>
+
+    
+        <StackLayout Margin="0,0,0,10">
+            <Label Text="Formación"/>
+            <Entry Placeholder="Formación" x:Name="formacionEntry" Margin="0,0,0,10"/>
+            <Button Text="Agregar Formación" Clicked="AgregarFormacion" Margin="0,0,0,10"/>
+        </StackLayout>
+
+        <StackLayout Margin="0,0,0,10">
+            <Label Text="Idiomas"/>
+            <Entry Placeholder="Idiomas" x:Name="idiomasEntry" Margin="0,0,0,10"/>
+            <Button Text="Agregar Idioma" Clicked="AgregarIdioma" Margin="0,0,0,10"/>
+        </StackLayout>
+
+        <Button Text="Guardar" Clicked="GuardarDatos" Margin="0,20,0,0" BackgroundColor="#4CAF50" TextColor="White"/>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
